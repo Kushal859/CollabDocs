@@ -1,3 +1,8 @@
+"""
+CollabDocs :- 
+All 8 models with UUID PKs, TextChoices, constraints, and relationships.
+"""
+
 import uuid
 from django.db import models
 from django.contrib.auth.models import AbstractUser
