@@ -71,6 +71,7 @@ class UserViewSet(viewsets.ModelViewSet):
 # Workspaces
 # ---------------------------------------------------------------------------
 class WorkspaceViewSet(viewsets.ModelViewSet):
+    queryset = Workspace.objects.all()  # Added for router compatibility
     serializer_class = WorkspaceSerializer
     permission_classes = [IsAuthenticated]
 
@@ -161,6 +162,7 @@ class WorkspaceViewSet(viewsets.ModelViewSet):
 # Documents
 # ---------------------------------------------------------------------------
 class DocumentViewSet(viewsets.ModelViewSet):
+    queryset = Document.objects.all()  # Added for router compatibility
     serializer_class = DocumentSerializer
     permission_classes = [IsAuthenticated]
 
@@ -252,6 +254,7 @@ class DocumentViewSet(viewsets.ModelViewSet):
 # Comments
 # ---------------------------------------------------------------------------
 class CommentViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()  # Added for router compatibility
     serializer_class = CommentSerializer
     permission_classes = [IsAuthenticated]
 
@@ -288,6 +291,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 # Tags
 # ---------------------------------------------------------------------------
 class TagViewSet(viewsets.ModelViewSet):
+    queryset = Tag.objects.all()  # Added for router compatibility
     serializer_class = TagSerializer
     permission_classes = [IsAuthenticated]
 
@@ -303,6 +307,7 @@ class TagViewSet(viewsets.ModelViewSet):
 # AuditLogs (read-only)
 # ---------------------------------------------------------------------------
 class AuditLogViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = AuditLog.objects.all()  # Added for router compatibility
     serializer_class = AuditLogSerializer
     permission_classes = [IsAuthenticated]
 
